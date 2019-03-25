@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		form{
+			height: 500px;
+			width: 400px;
+			/*border: 1px solid black;*/
+		}
+		span{
+			background-color: gray;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		form{
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+		.y1{
+			width: 150px;
+			height: 30px;
+		}
+		.y2{
+			padding-top: 0px;
+			margin-top: 0px;
+		}
+		.y3{
+			width: 170px;
+			height: 35px;
+		}
+		.y4{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="search" id="sousuo" name="search" class="y3" value="请输入要查找的商品">
+		<input type="submit" value="搜索" id="d" class="y1">
+		<p class="y2">最近搜索</p>
+		<div id="sss">
+			
+		</div>
+		<button class="y4" id="qing">×</button>
+	</form>
+</body>
+<script type="text/javascript">
+	var get_v = document.getElementById("sousuo");
+	var d = document.getElementById("d");
+	var s = document.getElementById("sss");
+	var qing = document.getElementById("qing");
+	var count;
+
+	d.onclick = function(){
+		var v = get_v.value;	
+		var sps = document.getElementsByTagName("span");
+		count = sps.length;
+		var sp=document.createElement("span");
+
+		
+		var tag=0;
+		if(count > 0){
+			for(var i=0;i<sps.length;i++){
+				if(v==sps[i].innerHTML){
+
+					tag=1;
+				}
+       		}
+       		if(tag==0){
+       			count++;
+       			s.appendChild(sp);
+				sp.innerHTML = v;
+       		}
+		}
+		if(count == 0)
+		{
+			s.appendChild(sp);
+			sp.innerHTML = v;
+			count++;
+		}
+		for(var j=0;j<count;j++)
+		{
+			localStorage.setItem(v,v);
+		}
+
+		return false;
+	}
+
+	qing.onclick = function(){
+        localStorage.clear();
+        s.innerHTML="";
+	}
+
+    for(var i=0; i<localStorage.length; i++){
+		var key = localStorage.key(i);
+		var data = localStorage.getItem(key);
+   	 	var sp_old=document.createElement("span");
+   	 	s.appendChild(sp_old);
+       	sp_old.innerHTML=data;
+	}
+
+</script>
+</html>
