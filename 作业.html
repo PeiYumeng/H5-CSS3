@@ -70,7 +70,8 @@
        		}
        		if(tag==0){
        			count++;
-       			s.appendChild(sp);
+       			//s.appendChild(sp);
+       			s.insertBefore(sp,sps[0]);
 				sp.innerHTML = v;
        		}
 		}
@@ -80,10 +81,10 @@
 			sp.innerHTML = v;
 			count++;
 		}
-		for(var j=0;j<count;j++)
-		{
-			localStorage.setItem(v,v);
-		}
+		//for(var j=0;j<count;j++)
+		//{
+			localStorage.setItem(count,v);
+		//}
 
 		return false;
 	}
@@ -93,11 +94,16 @@
         s.innerHTML="";
 	}
 
-    for(var i=0; i<localStorage.length; i++){
+    for(var i=localStorage.length; i>=0; i--){
+    	console.log(i);
+    	var sps = document.getElementsByTagName("span");
 		var key = localStorage.key(i);
+		console.log(key);
 		var data = localStorage.getItem(key);
+		console.log(data);
    	 	var sp_old=document.createElement("span");
    	 	s.appendChild(sp_old);
+   	 	//s.insertBefore(sp_old,sps[0]);
        	sp_old.innerHTML=data;
 	}
 
