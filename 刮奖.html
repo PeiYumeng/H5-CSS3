@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .can{
+            border:2px solid red;
+            background-image: url(./DSC_0824.JPG);
+            background-size:100%,100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id = "canvas" width="500px"  height="300px"  class="can">
+        您的浏览器不支持canvas元素，请更换或更新浏览器
+    </canvas>
+</body>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+
+    context.beginPath();
+    context.fillStyle = "red";
+    context.fillRect(0, 0, 500, 300);//目标图像
+    context.fill();
+    context.stroke();
+    context.closePath();
+
+    canvas.onmousedown = function(){
+        canvas.onmousemove = function(ev){
+            var event = ev || window.event;
+        
+            context.beginPath();
+            context.globalCompositeOperation = 'destination-out';
+            context.fillStyle = "white";
+        // context.arc(50, 50, 40, 0, 2 * Math.PI);//源图像
+            context.arc(event.clientX, event.clientY, 40, 0, 2 * Math.PI);//源图像
+            context.fill();
+            context.stroke();
+            context.closePath();
+        }
+    } 
+    canvas.onmouseup = function(){
+        var imgData = context.getImageData(0, 0, 500, 300);
+        var t=0;
+        for (var i = 0; i < imgData.data.length; i += 4) {
+            (function(i){
+                var a = imgData.data[i+3];
+                if(a<10)
+                    t++;
+            })(i)
+        }
+        console.log(t/(imgData.data.length/4));
+        if(t/(imgData.data.length/4) >= 0.85){
+            context.clearRect(0,0,500,300)
+        }
+    }
+</script>
+</html>
