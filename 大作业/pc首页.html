@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration:none;
+            color:white;
+        }
+        header{
+            width:100%;
+            height:45px;
+            background-color: #282828;
+            display:block;
+        }
+        .a1{
+            margin-right:110px;
+            float:right;
+            color:white;
+            padding-top:10px;
+        }
+        .b1{
+            height:30px;
+            float:left;
+            margin-right:10px;
+        }
+        .a1 span{
+            margin-right:20px;
+        }
+        .a1 a{
+            margin-right:20px;
+        }
+        @media screen and (max-width:750px){
+            header{
+                display:none;
+            }
+        }
+
+        nav{
+            padding-bottom: 10px;
+        }
+        nav a{
+            color:black;
+            font-size:20px;
+        }
+        nav img{
+            padding-right:100px;
+        }
+        #active_1{
+            border-bottom:3px solid orange;
+        }
+
+        #zi{
+          /* width:600px;
+          height:180px; */
+          width:50%;
+          height:30%;
+          position: absolute;
+          top:30px;
+          left:10%;
+          color:white;
+        }
+        #zi_1{
+          padding-top:20px;
+          line-height: 30px;
+        }
+        #zi_1_1{
+          border-top:2px solid white;
+          padding-top:10px;
+        }
+        #zi_1_2{
+          border-bottom:2px solid white;
+          padding-bottom:10px;
+        }
+        @media screen and (max-width:750px){
+          #zi_1{
+            display:none;
+          }
+          #zi{
+            width:60%;
+          }
+          #zi h1{
+            font-size:18px;
+          }
+          #sousuo{
+            width:670px;
+            height:70px;
+          } 
+        }
+        .carousel-caption{
+          padding:0px;
+          margin:0 auto;
+        }
+        #sousuo{
+          /* width:600px;
+          height:58px; */
+          /* position:absolute; */
+          width:40%;
+          height:12%;
+          border-radius: 5px;
+          border:5px solid black;
+          border-color: rgba(0, 0, 0, 0.6);
+        }
+        #sousuo_left{
+          /* width:150px;
+          height:50px; */
+          width:25%;
+          height:100%;
+          background-color: #d3d3d8;
+          float:left;
+          border-top-left-radius:5px;
+          border-bottom-left-radius:5px;
+
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+        #sousuo input{
+          float:left;
+          /* height:50px;
+          width:310px; */
+          border:none;
+          width:50%;
+          height:100%;
+        }
+        #sousuo_right{
+          /* width:130px;
+          height:50px; */
+          width:25%;
+          height:100%;
+          background-color: #cb5405;
+          float:left;
+          border-top-right-radius:5px;
+          border-bottom-right-radius:5px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+        /* #sousuo_left img{
+          margin-top:13px;
+        } */
+        #sousuo img{
+          width:15%;
+          height:40%;
+          margin:0 auto;
+        }
+        #sousuo button{
+          /* background-color: none; */
+          width:100%;
+          height:100%;
+          background-color: #cb5405;
+          border:none;
+        }
+        /* #sousuo input{
+          padding:5px 10px 5px 10px;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- 最上面黑条 -->
+    <header>
+        <div class="a1">
+            <div class="b1">
+                    <img src="img/tell.png" alt="">
+            </div>
+            <span>400-808-8682 </span>
+            <a href="#">请登录</a>
+            <span>|</span>
+            <a href="#">注册</a>
+        </div>
+    </header>
+    <!-- 响应式导航 -->
+    <div class="container">
+            <p></p>
+            <nav class="navbar-default" style="background-color:white">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <img src="img/logo.png" alt="">
+              </div>
+              <div class="collapse navbar-collapse" id="col-1">
+                <ul class="nav navbar-nav">
+                  <li id="active_1"><a href="">首页</a></li>
+                  <li><a href="">热门路线</a></li>
+                  <li><a href="">签证推荐</a></li>
+                  <li><a href="">使命愿望</a></li>
+                </ul>
+                <form action="" class="navbar-form navbar-right">
+                </form>
+              </div>
+            </nav>
+    </div>
+    <!-- 轮播 -->
+    <div id="generic" class="carousel slide" data-ride="carousel" id="banner_top">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img alt="" src="img/banner.jpg" style="width:100%;">
+        </div>
+        <div class="item">
+          <img alt="" src="img/banner2_01.jpg" style="width:100%"> 
+        </div>
+      </div>
+      <div id="zi">
+        <h1>悠游古欧洲 遍览德瑞法意</h1>
+        <div id="zi_1">
+          <span id="zi_1_1">巴黎卢浮宫、塞纳河游船、凡尔赛宫</span>
+          <br>
+          <span id="zi_1_2">少女峰、大运河游船、金色列车，西庸城堡</span>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+      <!-- 搜索框 -->
+      <form action=""class="carousel-caption" id="sousuo">
+          <div id="sousuo_left" >
+            <img src="img/position.png" alt="" >
+          </div>
+          <input type="search"  id="search" placeholder="| &nbsp;日本&nbsp; 美国 &nbsp;英国&nbsp; 地中海">
+          <div id="sousuo_right">
+            <button>
+                <img src="img/search.png" alt="">
+            </button>
+          </div>
+      </form>
+
+      </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>    
+<script src="js/bootstrap.min.js"></script>
+
+</html>
