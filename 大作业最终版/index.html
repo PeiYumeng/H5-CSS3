@@ -629,7 +629,96 @@
               margin-left:7%;
             }
         }
-
+        .col_5{
+          position:absolute;
+          top:87.5%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          text-align: left;
+          padding:10px 10px 10px 40px;
+          width:95%;
+        }
+        .col_5 span{
+          font-size:25px;
+        }
+        #col_6{
+          top:35%;
+          width:96%;
+        }
+        #col_7{
+          top:84%;
+          width:96%;
+        }
+        #col_8{
+          top:36%
+        }
+        #col_9{
+          top:85%
+        }
+        .col_1_1{
+          position:absolute;
+          top:32%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          text-align: left;
+          padding-top:10px;
+          width:94.7%;
+          display:none;
+        }
+        .awsl{
+          float:right;
+          position: absolute;
+          left:70%;
+          top:40%;
+        }
+        .col_5_5{
+          position: absolute;
+          top:80%;
+          padding-top:5px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          display:none;
+        }
+        .col_5_6{
+          position: absolute;
+          top:30%;
+          padding-top:5px;
+          padding-right:15px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          width:90%;
+          font-size: 12px;
+          display:none;
+        }
+        .col_5_7{
+          position: absolute;
+          top:80%;
+          padding-top:5px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          width:90%;
+          display:none;
+        }
+        @media screen and (max-width:750px){
+          .col_1{
+            display:none;
+          }
+          .col_1_1{
+            display:block;
+          }
+          .col_5{
+            display:none;
+          }
+          .col_5_5{
+            display:block;
+          }
+          .col_5_6{
+            display:block;
+          }
+          .col_5_7{
+            display:block;
+          }
+        }
     </style>
 </head>
 <body data-spy="scroll">
@@ -776,11 +865,21 @@
               <p>海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
               <p>¥<span>2580</span>/人起</p>
             </div>
+            <div class="col_1_1">
+              <p>海南三亚5天4晚，</p>
+              <p>纯玩、4晚红树林度假王国</p>
+              <p class="awsl">¥<span style="font-size:20px">2580</span>/人起</p>
+            </div>
             <img src="img/hot2.jpg" alt="">
             <div class="col_1">
                 <p>德法意瑞欧洲4日游，ABCD路线由您任选</p>
                 <p>¥<span>7999</span>/人起</p>
-              </div>
+            </div>
+            <div class="col_1_1" style="top:85%;">
+              <p>德法意瑞欧洲4日游</p>
+              <p>ABCD路线由您任选</p>
+              <p class="awsl">¥<span style="font-size:20px">7999</span>/人起</p>
+            </div>
           </div>
           <div class="col-md-6" id="col_right" style="padding-right:15px;padding-left:5px;" id="remen_2">
               <img src="img/hot3.jpg" alt="">
@@ -823,14 +922,38 @@
       <div class="row">
         <div class="col-md-4 col-xs-5" id="col_left_999" style="padding-left:15px;padding-right:5px;">
           <img src="img/visa1.jpg" alt="">
+          <div class="col_5">
+            <p>日办旅游签证   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¥<span>420</span>/人</p>
+          </div>
+          <div class="col_5_5">
+            <p>日办旅游签证   &nbsp;&nbsp;&nbsp;¥<span>420</span></p>
+        </div>
         </div>
         <div class="col-md-4  col-xs-7" id="col_left_3">
           <img src="img/visa2_2_01.jpg" alt="">
+          <div class="col_5" id="col_6">
+            <p>新加坡旅游签证   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¥<span>370</span>/人</p>
+        </div>
+        <div class="col_5_6">
+          <p>美国旅游签证   ¥<span style="font-size:16px;">1380</span></p>
+      </div>
           <img src="img/visa3_1_01.jpg" alt="">
+          <div class="col_5" id="col_7">
+            <p>申根旅游签证 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¥<span>999</span>/人</p>
+        </div>
+        <div class="col_5_7">
+          <p>申根旅游签证  &nbsp;&nbsp;&nbsp;¥<span>999</span></p>
+      </div>
         </div>
         <div class="col-md-4" id="col_left_2" style="padding-right:15px;padding-left:5px;">
           <img src="img/visa4.jpg" alt="">
-          <img src="img/visa5.jpg" alt="">
+          <div class="col_5"  id="col_8">
+            <p>马来西亚旅游签证   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¥<span>450</span>/人</p>
+        </div>
+          <img src="img/visa5.jpg" alt=""  id="col_9">
+          <div class="col_5">
+            <p>美国旅游签证   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¥<span>1380</span>/人</p>
+        </div>
         </div>
       </div>
   </div>
