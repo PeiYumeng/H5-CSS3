@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration:none;
+            color:white;
+        }
+        header{
+            width:100%;
+            height:45px;
+            background-color: #282828;
+            display:block;
+        }
+        .a1{
+            margin-right:110px;
+            float:right;
+            color:white;
+            padding-top:10px;
+        }
+        .bb1{
+            height:30px;
+            float:left;
+            margin-right:10px;
+        }
+        .a1 span{
+            margin-right:20px;
+        }
+        .a1 a{
+            margin-right:20px;
+        }
+        #kuaisu{
+          float:right;
+          background-color: #e8420a;
+          font-size:18px;
+          border-radius: 5px;
+          color:white;
+        }
+        /* #logo_top img{
+          float:left;
+          width:60%;
+        } */
+        @media screen and (max-width:1000px){
+          #logo_top img{
+              padding-right:50px;
+            }
+        }
+        @media screen and (max-width:750px){
+            header{
+                display:none;
+            }
+            nav ul{
+              padding:0xp;
+            }
+            #PC_bottom{
+              display:none;
+            }
+            #remen_2{
+              display:none;
+            }
+            #logo_top img{
+              padding-right:0px;
+              width:45%;
+              padding-top:10px;
+            }
+        }
+        nav{
+            padding-bottom: 10px;
+        }
+        nav ul{
+          padding-left:50px;
+        }
+        nav a{
+            color:black;
+            font-size:20px;
+        }
+        nav img{
+            padding-right:150px;
+            /* width:80%;
+            height:80%; */
+        }
+        .active{
+            border-bottom:3px solid orange;
+
+        }
+
+        #zi{
+          /* width:600px;
+          height:180px; */
+          width:50%;
+          height:30%;
+          position: absolute;
+          top:30px;
+          left:10%;
+          color:white;
+        }
+        #zi_1{
+          padding-top:20px;
+          line-height: 30px;
+        }
+        #zi_1_1{
+          border-top:2px solid white;
+          padding-top:10px;
+        }
+        #zi_1_2{
+          border-bottom:2px solid white;
+          padding-bottom:10px;
+        }
+        #zi h5{
+          display:none;
+        }
+        @media screen and (max-width:750px){
+            #shouji_1{
+              display:block;
+            }
+          #zi_1{
+             display:none;
+           }
+            #zi h1{
+             font-size:15px;
+             position: absolute;
+             margin:0px;
+           }
+            #zi h5{
+              display:block;
+           }
+           #sousuo{
+             width:80%;
+              height:30%;
+             margin-left:-5%;
+            }
+        }
+        @media screen and (min-width:750px) and (max-width:850px){
+            #zi_1{
+             display:none;
+            }
+            #zi h1{
+              font-size:30px;
+              position: absolute;
+              margin:0;
+            }
+            #zi h5{
+              font-size:20px;
+              display:block;
+            }
+        }
+        @media screen and (min-width:750px){
+            #sousuo{
+            width:40%;
+            height:15%;
+            }
+        }
+        
+        .carousel-caption{
+          padding:0px;
+          margin:0 auto;
+        }
+        #sousuo{
+          /* width:40%;
+          height:15%; */
+          border-radius: 5px;
+          border:5px solid black;
+          border-color: rgba(0, 0, 0, 0.6);
+        }
+        #sousuo_left{
+          /* width:150px;
+          height:50px; */
+          width:25%;
+          height:100%;
+          background-color: #d3d3d8;
+          float:left;
+          border-top-left-radius:5px;
+          border-bottom-left-radius:5px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+        #sousuo input{
+          float:left;
+          /* height:50px;
+          width:310px; */
+          border:none;
+          width:50%;
+          height:100%;
+          color:black;
+        }
+        #sousuo_right{
+          /* width:130px;
+          height:50px; */
+          width:25%;
+          height:100%;
+          background-color: #cb5405;
+          float:left;
+          border-top-right-radius:5px;
+          border-bottom-right-radius:5px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+        #sousuo img{
+          width:15%;
+          height:40%;
+          /* margin-left:20%; */
+          margin:0 auto;
+        }
+        #sousuo button{
+          /* background-color: none; */
+          width:100%;
+          height:100%;
+          background-color: #cb5405;
+          border:none;
+        }
+        #sousuo_left span{
+          color:black;
+          margin-left:5px;
+        }
+        #lala_1{
+          width:80%;
+          margin:0 auto;
+        }
+        .ban_right{
+          display: block;
+          width:20%;
+          background-color: #14316d;
+          float:left;
+          font-size: 18px;
+          color:white;
+          height:0;
+          padding-bottom:31.1%;
+          text-align: center;
+        }
+        @media screen and (min-width:750px) and (max-width:1000px){
+            .ban_right img{
+              padding-top:20%;
+            }
+            #sousuo_left span{
+              font-size:10px;
+            }
+        }
+        @media screen and (min-width:1000px){
+            .ban_right img{
+              padding-top:40%;
+            }
+        }
+        @media screen and (max-width:400px){
+            #sousuo_left span{
+              font-size:10px;
+            }
+            #sousuo{
+              top:70%;
+            }
+        }
+        .ban_right p{
+          padding-top:5%;
+          padding-bottom:15%;
+        }
+        .ban_right button{
+          background-color: #14316d;
+          border-radius: 10px;
+          border:1px solid white;
+          padding:3% 10% 3% 10%;
+        }
+        .row img{
+          width:100%;
+        }
+        .col-md-6{
+          padding:0;
+        }
+        .col-md-4{
+          padding:0;
+        }
+        .col_1{
+          height:76px;
+          background-color:black;
+          color:white;
+          text-align: left;
+          padding:15px 10px 10px 40px;
+        }
+        .col_1 p{
+          margin:0;
+        }
+        .col_1 span{
+          font-size:25px;
+        }
+        #last{
+          background-color: #1c5080;
+          width:100%;
+          height:400px;
+          text-align: center;
+        }
+        #last td{
+          width:33%;
+          background-image: url(img/rorate.png) no-repeat;
+        }
+
+        .c1{
+          background-color:#1b4d7b;
+          max-height:100%;
+          padding-bottom:28.5%;
+        }
+        #bot{
+          width:100%;
+          background-color: black;
+          height:530px;
+          padding-top:50px;
+        }
+        li{
+          list-style: none;
+          color:white;
+        }
+        .b1{
+          width:100px;
+          height:280px;
+          font-size: 18px;
+          float: left;
+        }
+        .b1 li{
+          width:110px;
+        }
+        .b1_1{
+          height:100px;
+        }
+        .b1_2{
+          height:70px;
+        }
+        .b1_3{
+          height:40px;
+        }
+        .b1_4{
+          height:50px;
+        }
+        .b2{
+          width:600px;
+          height:80px;
+          float:left;
+          text-align: center;
+        }
+        .b2 img{
+          margin-bottom:10px;
+        }
+        .b2 li{
+          width:110px;
+          height:70px;
+          margin-right:20px;
+          float:left;
+        }
+        .b3{
+          /* width:999px; */
+          width:87%;
+          height:200px;
+          float:left;
+          text-align: left;
+          font-size: 13px;
+          margin-top:15px;
+        }
+        .b3 li{
+          float:left;
+          margin-bottom:15px;
+        }
+        #bot p{
+          color:white;
+          float:left;
+          padding-top:5%;
+          padding-left:30%;
+        }
+
+        #shouji_1{
+          background-color: #f5f5f5;
+          width:100%;
+          padding-top:20px;
+          padding-bottom:20px;
+          display:none;
+        }
+        #shouji_1 img{
+          margin-top:40px;
+        }
+        #PC_1{
+          display:block;
+        }
+        #shouji_1 span{
+          font-size: 20px;
+          color:#1c5080;
+        }
+        #shouji_1 p{
+          padding:0px;
+        }
+        #shouji_1_1{
+            width:80%;
+        }
+        @media screen and (max-width:750px){
+          #PC_1{
+            display:none;
+          }
+        }
+        @media screen and (min-width:550px){
+            #shouji_1 p{
+              font-size:16px;
+            }
+            #shouji_1 span{
+              font-size:18px;
+            }
+            #shouji_1_1{
+              width:80%;
+            }
+        }
+        #shouji_1_1{
+          padding-top:40px;
+          padding-left:10px;
+          float:left;
+        }
+        #shouji_1 button{
+          /* margin-top:60px; */
+          width:25%;
+          font-size:14px;
+          float:right;
+          position: relative;
+          top:-50%;
+          background-color: white;
+          border-radius: 5px;
+          border:1px solid black;
+          padding:2% 3% 2% 3%;
+        }
+        @media screen and (max-width:750px){
+            #col_right{
+              display:none;
+            }
+            #col_left_2{
+              display:none;
+          }
+          #shouji_1{
+            display:block;
+          }
+        }
+
+      .mm{
+        width: 35%;
+        height:50px;
+        border:1px solid black;
+        border-radius: 10px;
+        background: white;
+        text-align: center;
+        margin-left:30%;
+        font-size: 20px;
+        margin-top:30px;
+        margin-bottom:20px;
+      }
+      #cc{
+        color:white;
+        background-color:#1b4d7b;
+        height:100%;
+        padding-top:5%;
+        padding-bottom:12.4%;
+      }
+      @media screen and (max-width:1200px){
+        #cc{
+        padding-bottom:9.9%;
+      }
+      }
+      .shouji_2{
+        border-left:3px solid #e8420a;
+        padding-left:10px;
+        margin-top:20px;
+        display:none;
+      }
+      #xian_1{
+        display:none;
+      }
+      #remenluxian p{
+        margin-bottom:20px;
+      }
+      @media screen and (max-width:750px){
+          #remenluxian{
+            display:none;
+          }
+          .shouji_2{
+            display:block;
+          } 
+          #xain_1{
+            display:block;
+          }
+        }
+        .col_2{
+          position:absolute;
+          top:20%;
+          /* height:76px; */
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          text-align: left;
+          padding:15px 10px 10px 40px;
+          width:96.6%;
+        }
+        .col_3{
+          position:absolute;
+          top:55%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          text-align: left;
+          padding:15px 10px 10px 40px;
+          width:96.6%;
+        }
+        .col_4{
+          position:absolute;
+          top:91%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color:white;
+          text-align: left;
+          padding:15px 10px 10px 40px;
+          width:96.6%;
+        }
+        #qianzheng p {
+          margin-bottom:20px;
+        }
+        #mm1{
+            display:none;
+          }
+        #hui{
+          width:100%;
+          height:20px;
+          background-color:#f5f5f5;
+          display:none;
+        }
+        #xian_2{
+          display:none;
+        }
+        .col-xs-7 img{
+          /* width:63%; */
+          margin-bottom:5%;
+          overflow: hidden;
+        }
+        .col-xs-7{
+          padding-right:15px;
+        }
+        .col-xs-5 img{
+          /* height:250%; */
+        }
+        .col-md-5{
+          padding-right:0;
+        }
+        #last_2{
+          padding-left:0;
+          margin-top:15%;
+          display:none;
+        }
+        #last_2 li{
+          color:black;
+          margin-bottom:10%;
+        }
+        .lll{
+          float:left;
+          display:block;
+          margin-right:5%;
+          width:15%;
+          margin-left:3%;
+          margin-top:3%;
+        }
+        #shouji_bottom{
+          background-color: black;
+          height:300px;
+          color:white;
+          padding-top:30%;
+          display:none;
+        }
+        #ya{
+          background: url(img/rorate.png) no-repeat center ;
+          width:220px;
+          height:200px;
+          margin:0 auto;
+
+        }
+        #ya img{
+          margin-top:30%;
+          margin-bottom:40%;
+        }
+        #ya p{
+          font-size:12px;
+          color:white;
+        }
+        @media screen and (max-width:750px){
+            #xain_2{
+              display:block;
+            }
+            #qianzheng{
+              display:none;
+            }
+            #hui{
+              display:block;
+            }
+            #mm1{
+              display:block;
+            }
+            #pc_long{
+              display:none;
+            }
+            #PC_2{
+              display:none;
+            }
+            #cc{
+              padding-left:8%;
+              background-color: white;
+              color:black;
+            }
+            .col-md-5{
+              padding-right:15px;
+            }
+            #last{
+              display:none;
+            }
+            #bot{
+              display:none;
+            }
+            #shouji_bottom{
+              display:block;
+            }
+            #last_2{
+              display:block;
+            }
+            /* #col_left_3 img{
+              width:80%;
+            } */
+            #col_left_3{
+              width:41%;
+            }
+            #col_left_999{ 
+              margin-left:7%;
+            }
+        }
+
+    </style>
+</head>
+<body data-spy="scroll">
+    <!-- 最上面黑条 -->
+    <div id="guding" class="navbar-fixed-top">
+    <header>
+        <div class="a1">
+            <div class="bb1">
+                    <img src="img/tell.png" alt="">
+            </div>
+            <span>400-808-8682 </span>
+            <a href="#">请登录</a>
+            <span>|</span>
+            <a href="#">注册</a>
+        </div>
+    </header>
+    <!-- 响应式导航 -->
+    <div style="background-color: white;width:100%">
+    <div class="container" >
+            <p></p>
+            <nav class="navbar-default" style="background-color:white">
+              <div class="navbar-header"   id="logo_top">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1" style="float:right;border:none;height:50px;width:20px;">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="kuaisu">快速制定</button>
+                <div>
+                  <img src="img/logo.png" alt="">
+                </div>
+              </div>
+              <div class="collapse navbar-collapse" id="col-1">
+                <ul class="nav navbar-nav" id="xiejs">
+                  <li class="active"><a href="#fff">首页</a></li>
+                  <li ><a href="#remenluxian">热门路线</a></li>
+                  <li><a href="#qianzheng">签证推荐</a></li>
+                  <li><a href="#PC_2">使命愿望</a></li>
+                </ul>
+                <form action="" class="navbar-form navbar-right">
+                </form>
+              </div>
+            </nav>
+    </div>
+  </div>
+  </div>
+  <!-- 为了让导航栏即跟着滚动动又占据位置，让它占位置不让下面样式跑 -->
+  <div style="height:120px;" id="fff">
+  </div>
+    <!-- 轮播 -->
+    <div id="generic" class="carousel slide" data-ride="carousel" id="banner_top">
+      <div class="carousel-inner">
+        <div class="item active" id="lalalala">
+          <img alt="" src="img/banner.jpg" style="width:100%;">
+        </div>
+        <div class="item">
+          <img alt="" src="img/banner2_02.jpg" style="width:100%"> 
+        </div>
+      </div>
+      <div id="zi">
+        <h1>悠游古欧洲 遍览德瑞法意</h1>
+        <br>
+        <h5>全称升级热早+1晚5星级酒店</h5>
+        <div id="zi_1">
+          <span id="zi_1_1">巴黎卢浮宫、塞纳河游船、凡尔赛宫</span>
+          <br>
+          <span id="zi_1_2">少女峰、大运河游船、金色列车，西庸城堡</span>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+      <!-- 搜索框 -->
+      <form action=""class="carousel-caption" id="sousuo">
+          <div id="sousuo_left" >
+            <img src="img/position.png" alt="" style="margin-right:0;margin-left:25%;" ><span>目的地</span>
+          </div>
+          <input type="search"  id="search" placeholder="| &nbsp;日本&nbsp; 美国 &nbsp;英国&nbsp; 地中海">
+          <div id="sousuo_right">
+            <button>
+                <img src="img/search.png" alt="">
+            </button>
+          </div>
+      </form>
+    </div>
+
+    <!-- 轮播+车 -->
+    <div class="container" id="PC_1">  
+        <div id="generic2" class="carousel slide" data-ride="carousel" id="banner_bottom" style="width:80%;float:left">
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img alt="" src="img/Sbanner1_1.jpg" style="width:100%;">
+              </div>
+            <div class="item">
+                <img alt="" src="img/Sbanner2.jpg" style="width:100%"> 
+            </div>
+          </div>
+          <a class="left carousel-control" href="#generic2" data-slide="prev"></a>
+          <a class="right carousel-control" href="#generic2" data-slide="next"></a>
+        </div>
+        <div class="ban_right">
+            <div class="ban_right_1">
+                <img src="img/car.png" alt="">
+            </div>
+            <div class="ban_right_2">
+                <p>车辆接送</p>
+            <button>查看详情</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="shouji_1">
+        <div class="container" style="background-color:white;height:150px;">  
+          <img src="img/carH.png" alt="" style="float:left;display:block;width:18%;">
+          <div id="shouji_1_1">
+              <span style="margin-bottom:25px;display:block">机场接送 省钱省心</span>
+              <p style="margin:0px;">提供上海、苏州、无锡各市</p>
+              <p>往返机场、码头接送服务，更有包车服务</p>
+          </div>
+          <button>查看详情</button>
+        </div>
+    </div>
+    
+    <div class="container" id="remenluxian">  
+      <h1 class="text-center">热门路线</h1>
+      <p  class="text-center">Popular tourist routes</p>
+    </div>
+    <div class="container">  
+      <h3 class="shouji_2 text-left">热门路线</h3>
+    </div>
+    <div class="container" id="xian_1">  
+      <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+    </div>
+
+    <div class="container">  
+		    <div class="row">
+          <div class="col-md-6" id="col_left" style="padding-left:15px;padding-right:5px;">
+            <img src="img/hot1.jpg" alt="">
+            <div class="col_1">
+              <p>海南三亚5天4晚，纯玩、4晚红树林度假王国</p>
+              <p>¥<span>2580</span>/人起</p>
+            </div>
+            <img src="img/hot2.jpg" alt="">
+            <div class="col_1">
+                <p>德法意瑞欧洲4日游，ABCD路线由您任选</p>
+                <p>¥<span>7999</span>/人起</p>
+              </div>
+          </div>
+          <div class="col-md-6" id="col_right" style="padding-right:15px;padding-left:5px;" id="remen_2">
+              <img src="img/hot3.jpg" alt="">
+              <div class="col_2">
+                  <p>曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</p>
+                  <p>¥<span>2799</span>/人起</p>
+              </div>
+              <img src="img/hot4.jpg" alt="">
+              <div class="col_3">
+                  <p>日本本州游 樱花、寿司、温泉、美食</p>
+                  <p>¥<span>5399</span>/人起</p>
+              </div>
+              <img src="img/hot5.jpg" alt="">
+              <div class="col_4">
+                  <p>斯里兰卡7天6晚全景游   保证入住2晚香格里拉</p>
+                  <p>¥<span>7999</span>/人起</p>
+              </div>
+            </div>
+        </div>
+		</div>
+
+    <div class="container" id="qianzheng">  
+      <h1 class="text-center">签证推荐</h1>
+      <p  class="text-center">Visa recommendation</p>
+      <p class="text-center">热门：日本 马来西亚 美国 意大利 加拿大 新加坡</span>
+    </div>
+    <div class="container"> 
+        <button class="mm" id="mm1">查看更多 ></button>
+    </div>
+    <div id="hui"></div>
+
+    <div class="container">  
+        <h3 class="shouji_2 text-left">签证推荐</h3>
+    </div>
+    <div class="container" id="xian_2">  
+         <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+    </div>
+
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-4 col-xs-5" id="col_left_999" style="padding-left:15px;padding-right:5px;">
+          <img src="img/visa1.jpg" alt="">
+        </div>
+        <div class="col-md-4  col-xs-7" id="col_left_3">
+          <img src="img/visa2_2_01.jpg" alt="">
+          <img src="img/visa3_1_01.jpg" alt="">
+        </div>
+        <div class="col-md-4" id="col_left_2" style="padding-right:15px;padding-left:5px;">
+          <img src="img/visa4.jpg" alt="">
+          <img src="img/visa5.jpg" alt="">
+        </div>
+      </div>
+  </div>
+
+  <div class="container"> 
+    <button class="mm" id="pp">查看更多 ></button>
+  </div>
+  <div id="hui"></div>
+  <div class="container">  
+      <h3 class="shouji_2 text-left">使命与愿望：<span>让旅游回归本质</span></h3>
+  </div>
+  <div class="container" id="xian_2">  
+       <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+  </div>
+
+  <img src="img/Bbanner.jpg" alt="" style="width:100%;" id="pc_long">
+
+  <div class="container" id="PC_2">  
+    <h1 class="text-center">使命与愿望</h1>
+    <p  class="text-center"style="margin-bottom:20px">让旅游回归本质 体验纯粹旅游</p>
+  </div>
+
+  <div class="container">  
+    <div class="row">
+      <div class="col-md-5">
+        <img src="img/mission1.jpg" alt="">
+      </div>
+      <div class="col-md-7" id="cc">
+          <p style="font-size: 25px;margin-bottom:25px; text-align:center;">服务理念及优势</p>
+          <p style="text-align: left;">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <img src="img/mission2.jpg" alt="">
+          </div>
+    </div>
+</div>
+
+<div class="container">
+    <table id="last">
+      <tr>
+        <td>
+          <div id="ya"> 
+              <img src="img/icon1.png" alt="">
+               <p>旅游达人精心设计、基于口碑反复打磨</p>
+               <p>全网最好，敢跟任何产品比</p>
+          </div>
+        </td>
+        <td>
+          <div  id="ya">
+            <img src="img/icon2.png" alt="">
+            <p>不推自费，</p>
+            <p>不进垃圾购物站和伪景点</p>
+          </div>
+          </td>
+          <td>
+            <div  id="ya">
+              <img src="img/icon3.png" alt="">
+              <p>独立成团不散拼，</p>
+              <p>只跟亲朋好友一起玩，每天发团</p>
+            </div>
+         </td>
+      </tr>
+    </table>
+</div>
+
+<div class="container">
+    <ul id="last_2">
+      <h1 class="text-center" style="margin-bottom:5%">--服务优势--</h1>
+        <li class="l1">
+          <img src="img/icon11.png" alt="" class="lll">
+          <p class="text-left">旅游达人精心设计、基于口碑反复打磨， 告别人山人海鸡肋景点。 全网最好，敢跟任何产品比合作伙伴</p>
+        </li>
+        <div class="container" id="xian_3">  
+            <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+       </div>
+        <li class="l1">
+            <img src="img/icon22.png" alt="" class="lll">
+            <p class="text-left" style="padding-top:5%">不推自费，</p>
+            <p class="text-left">不进垃圾购物站和伪景点</p>
+        </li>
+        <div class="container" id="xian_3">  
+            <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+       </div>
+        <li class="l1">
+            <img src="img/icon33.png" alt="" class="lll">
+            <p class="text-left"  style="padding-top:5%">独立成团不散拼，</p>
+            <p class="text-left">只跟亲朋好友一起玩，每天发团</p>
+        </li>
+        <div class="container" id="xian_3">  
+            <div style="border-bottom:1px solid gray;margin-bottom:20px;"></div>
+       </div>
+    </ul>
+</div>
+
+<div  id="bot" style="background-color:black">
+    <div class="container" id="PC_bottom">
+      <ul class="b1">
+        <li class="b1_1">合作伙伴</li>
+        <li class="b1_2">热门位置</li>
+        <li class="b1_3">主题路线</li>
+        <li class="b1_4">友情链接</li>
+      </ul>
+      <ul class="b2">
+        <li>
+          <img src="img/1-PC-英华逸游官网主页_10.jpg" alt="">
+          携程网
+        </li>
+        <li>
+            <img src="img/1-PC-英华逸游官网主页_03.jpg" alt="">
+            携程网
+        </li>
+        <li>
+            <img src="img/1-PC-英华逸游官网主页_05.jpg" alt="">
+            携程网
+        </li>
+        <li>   
+            <img src="img/1-PC-英华逸游官网主页_07.jpg" alt="">
+            <br>
+            携程网
+        </li>
+      </ul>
+      <ul class="b3">
+          <li>
+              韩国&nbsp;&nbsp;&nbsp;日本&nbsp;&nbsp;&nbsp;菲律宾&nbsp;&nbsp;&nbsp;越南&nbsp;&nbsp;&nbsp;老挝&nbsp;&nbsp;&nbsp;柬埔寨&nbsp;&nbsp;&nbsp;泰国&nbsp;&nbsp;&nbsp;马来西亚&nbsp;&nbsp;&nbsp;新加坡&nbsp;&nbsp;&nbsp;印度尼西亚&nbsp;&nbsp;&nbsp;印度&nbsp;&nbsp;&nbsp;斯里兰卡&nbsp;&nbsp;&nbsp;土耳其&nbsp;&nbsp;&nbsp;阿联酋&nbsp;&nbsp;&nbsp;西班牙&nbsp;&nbsp;&nbsp;意大利&nbsp;&nbsp;&nbsp;希腊&nbsp;&nbsp;&nbsp;法国&nbsp;&nbsp;&nbsp;比利时&nbsp;&nbsp;&nbsp;荷兰
+          </li>
+          <li>
+              英国&nbsp;&nbsp;&nbsp;&nbsp;瑞士&nbsp;&nbsp;&nbsp;&nbsp;奥地利&nbsp;&nbsp;&nbsp;&nbsp;德国&nbsp;&nbsp;&nbsp;&nbsp;匈牙利&nbsp;&nbsp;&nbsp;&nbsp;俄罗斯&nbsp;&nbsp;&nbsp;&nbsp;捷克&nbsp;&nbsp;&nbsp;&nbsp;芬兰&nbsp;&nbsp;&nbsp;&nbsp;葡萄牙&nbsp;&nbsp;&nbsp;&nbsp;冰岛&nbsp;&nbsp;&nbsp;&nbsp;美国&nbsp;&nbsp;&nbsp;&nbsp;加拿大&nbsp;&nbsp;&nbsp;&nbsp;巴西&nbsp;&nbsp;&nbsp;&nbsp;阿根廷&nbsp;&nbsp;&nbsp;&nbsp;澳大利亚&nbsp;&nbsp;&nbsp;&nbsp;新西兰
+          </li>
+          <li>
+            海岛度假&nbsp;&nbsp;&nbsp;历史文化&nbsp;&nbsp;&nbsp;探索冒险&nbsp;&nbsp;&nbsp;美食购物&nbsp;&nbsp;&nbsp;都市生活&nbsp;&nbsp;&nbsp;海外游学&nbsp;&nbsp;&nbsp;邮轮度假&nbsp;&nbsp;&nbsp;蜜月摄影&nbsp;&nbsp;&nbsp;亲子乐园
+          </li>
+          <li>
+              马蜂窝&nbsp;&nbsp;&nbsp;穷游&nbsp;&nbsp;&nbsp;booking&nbsp;&nbsp;&nbsp;苏州旅游局&nbsp;&nbsp;&nbsp;驴友网&nbsp;&nbsp;&nbsp;吾爱全球签证中心&nbsp;&nbsp;&nbsp;酒店团购&nbsp;&nbsp;&nbsp;携程旅游攻略&nbsp;&nbsp;&nbsp;天巡职航在线&nbsp;&nbsp;&nbsp;满天飞旅游网&nbsp;&nbsp;&nbsp;中国旅游网&nbsp;&nbsp;&nbsp;澳乐网&nbsp;&nbsp;&nbsp;背包兔旅游行程      
+          </li>
+          <li>
+              出境旅游&nbsp;&nbsp;&nbsp;国际酒店&nbsp;&nbsp;&nbsp;广州旅行社&nbsp;&nbsp;&nbsp;出境旅游&nbsp;&nbsp;&nbsp;517旅行&nbsp;&nbsp;&nbsp;花生游&nbsp;&nbsp;&nbsp;家园网&nbsp;&nbsp;&nbsp;海外婚礼
+          </li>
+      </ul>
+      <p>苏ICP备14019690号、2014-2017 @苏州英华国际旅游有限公司 版权所有</p>
+    </div> 
+  </div>
+<div class="container" id="shouji_bottom">
+    <p class="text-center"> 苏ICP备14019690号、2014-2017</p>
+    <p class="text-center"> @苏州英华国际旅游有限公司 版权所有</p>
+    <p class="text-center">技术支持  杭州联橙科技</p>
+  </div>
+</body>
+<script src="js/jquery.js"></script>    
+<script src="js/bootstrap.min.js"></script>
+</html>
